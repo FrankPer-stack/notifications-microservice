@@ -1,15 +1,8 @@
 {
   "builds": [
     {
-      "src": "notifications_service/main.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "50mb" }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "notifications_service/main.py"
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
   ]
 }
