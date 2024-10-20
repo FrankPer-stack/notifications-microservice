@@ -14,10 +14,7 @@ ENV PYTHONPATH=/code
 COPY requirements.txt requirements.txt
 RUN python3 -m pip install -r requirements.txt
 
-# Copy code
 COPY notifications_service/ code/
-
-
 EXPOSE 5000
 
 CMD ["python3", "code/main.py"]
